@@ -1,0 +1,86 @@
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar.fixed-top {
+  background-color: rgb(236, 236, 236);
+  transition: 0.3s ease-in-out;
+  z-index: 1020;
+  border-bottom: 1px solid grey;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  height: 70px;
+  align-items: center;
+  list-style-type: none;
+}
+
+ .navBox{
+    display:flex;
+    padding:5px;
+    justify-content:center;
+    align-items:center;
+    background-color: #eeeeea;
+    width:100% ;
+    gap:30px;
+    height:62px;
+} 
+
+.logoBox{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+
+/* .menu{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    color: black;
+}
+
+.main_menu {
+  position: relative;
+  display: inline-block;
+}
+
+.xyz {
+  display: none;
+  position: absolute;
+  background-color: rgb(236, 236, 236);
+  min-width: 250px;
+  z-index: 1;
+  padding-left: 20px;
+  margin-left: -20px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  line-height: 40px;
+  margin-top: 3px;
+  transition: 0.1s;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.xyz .p:hover {
+  color: rgb(109, 151, 9);
+  transition: 0.2s;
+}
+
+.main_menu:hover .xyz {
+  display: block;
+}
+
+.main_menu:hover .menu-btn {
+  color: green;
+  border-bottom: 2px solid rgb(78, 78, 78);
+  transition: 0.1s;
+}
+
+.grow:hover {
+  color: green;
+  border-bottom: 2px solid rgb(78, 78, 78);
+} */
