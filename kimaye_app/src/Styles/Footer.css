@@ -1,0 +1,59 @@
+
+
+.footerBox{
+    background-color:#7d9c5b ;
+    display:flex;
+    flex-direction: column;
+}
+
+.upperBox{
+    height:150px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+    text-align: left;
+    font-size:14px;
+    font-weight: bold;
+}
+
+.list>div:hover{
+    color:rgb(197, 42, 42)
+}
+
+.follow{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+    text-align: left;
+    font-size:14px;
+    font-weight: bold;
+}
+
+.links{
+    display:flex;
+    gap:10px
+}
+
+.links>div>img{
+    height:30px;
+    width:30px
+}
+
+.lowerBox{
+    height:80px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.madeBy{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
