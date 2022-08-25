@@ -20,7 +20,8 @@ const Navbar = () => {
   }
 
   window.addEventListener("scroll", setFixed);
-    let cat = [
+   
+  let cat = [
         {
           id: 1,
           title: "SHOP",
@@ -66,8 +67,6 @@ const Navbar = () => {
         },
       ];
     
-    
-
 
   return (
     <div>
@@ -78,7 +77,7 @@ const Navbar = () => {
 
        <div className={fix ? "navBox fixed-top" : "navBox"}>
          
-         <Box display="flex" justifyContent="center" alignItems="center" gap="22px" fontSize="16px"  fontFamily="PT Sans" className="menu" w="30%" >
+         <Box display="flex" justifyContent="center" alignItems="center" gap="22px" fontSize="16px"  fontFamily="PT Sans" w="30%" >
            {cat.map((el) => (
             <Menu key={el.id}>
                <MenuButton>

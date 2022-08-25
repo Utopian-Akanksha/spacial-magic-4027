@@ -1,0 +1,46 @@
+.journey{
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+}
+
+
+.each {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    width: 100%;
+  }
+  
+  .desc{
+    width:25%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .desc > h1{
+    font-size: 150px;
+    color: rgb(173, 163, 163);
+    margin-left: 50px;
+  }
+
+  .desc > p{
+    font-size: 20px;
+    color: black
+  }
+
+  .image{
+    width: auto;
+  }
+
+  .image > img{
+    height:300px;
+    width:500px;
+    border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+ 

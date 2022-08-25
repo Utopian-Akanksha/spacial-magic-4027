@@ -1,0 +1,28 @@
+.recommendBox{
+    display:flex;
+    flex-direction: column;;
+    gap:70px;
+}
+
+.recommends{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+}
+
+.recommends>div>div{
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.recommends>div>div>img{
+    border-radius: 20px;
+    box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.5s all ease-in-out;
+}
+
+.recommends>div>div>img:hover{
+    transform: scale(1.2);
+}
