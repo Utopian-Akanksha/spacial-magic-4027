@@ -20,35 +20,32 @@ const Navbar = () => {
   }
 
   window.addEventListener("scroll", setFixed);
-   
-  let cat = [
+    let cat = [
         {
           id: 1,
           title: "SHOP",
-          path: "/shop",
+          to: "/",
           sub: {
             a: "All Fruits",
-            p1: "/allfruits",
-            b: "Fresh Fruits",
-            p2: "/freshcuts",
+            p1: "/all-fruits",
+            b: "All Veggies",
+            p2: "/all-veggies",
             c: "Fruits Combos",
-            p3: "/fruitcombos",
+            p3: "/combo",
             d: "Gift By Kimaye",
             p4: "/gifts",
-            e: "Grape Family By Kimaye",
+            e: "Resturant And Replacement",
             p5: "/",
-            f: "Resturant And Replacement",
+            f: "Friuts X Subscription",
             p6: "/",
-            g: "Friuts X Subscription",
+            g: "Community Buying",
             p7: "/",
-            h: "Community Buying",
-            p8: "/",
           },
         },
         {
           id: 2,
           title: "LEARN",
-          path: "/learn",
+          to: "/learn",
           sub: {
             a: "Our Story",
             p1: "/our-story",
@@ -67,6 +64,8 @@ const Navbar = () => {
         },
       ];
     
+    
+
 
   return (
     <div>
@@ -77,22 +76,21 @@ const Navbar = () => {
 
        <div className={fix ? "navBox fixed-top" : "navBox"}>
          
-         <Box display="flex" justifyContent="center" alignItems="center" gap="22px" fontSize="16px"  fontFamily="PT Sans" w="30%" >
+         <Box display="flex" justifyContent="center" alignItems="center" gap="22px" fontSize="16px"  fontFamily="PT Sans" className="menu" w="30%" >
            {cat.map((el) => (
             <Menu key={el.id}>
                <MenuButton>
-                  <Link  className="menu-btn" to={el.path}>{el.title}</Link>
+                  <Link  className="menu-btn" to={el.to}>{el.title}</Link>
               </MenuButton>
              <Portal>
                <MenuList>
-                <MenuItem><Link className="p" to={el.sub.p1}>{el.sub.a}</Link></MenuItem>
-                <MenuItem><Link className="p" to={el.sub.p2}>{el.sub.b}</Link></MenuItem>
-                <MenuItem><Link className="p" to={el.sub.p3}>{el.sub.c}</Link></MenuItem>
-                <MenuItem><Link className="p" to={el.sub.p4}>{el.sub.d}</Link></MenuItem>
-                <MenuItem><Link className="p" to={el.sub.p5}>{el.sub.e}</Link></MenuItem>
-                <MenuItem><Link className="p" to={el.sub.p6}>{el.sub.f}</Link></MenuItem>
-                <MenuItem><Link className="p" to={el.sub.p7}>{el.sub.g}</Link></MenuItem>
-                <MenuItem><Link className="p" to={el.sub.p8}>{el.sub.h}</Link></MenuItem>
+                <MenuItem><Link to={el.sub.p1}>{el.sub.a}</Link></MenuItem>
+                <MenuItem><Link to={el.sub.p2}>{el.sub.b}</Link></MenuItem>
+                <MenuItem><Link to={el.sub.p3}>{el.sub.c}</Link></MenuItem>
+                <MenuItem><Link to={el.sub.p4}>{el.sub.d}</Link></MenuItem>
+                <MenuItem><Link to={el.sub.p5}>{el.sub.e}</Link></MenuItem>
+                <MenuItem><Link to={el.sub.p6}>{el.sub.f}</Link></MenuItem>
+                <MenuItem><Link to={el.sub.p7}>{el.sub.g}</Link></MenuItem>
               </MenuList>
              </Portal>
           </Menu>
@@ -104,7 +102,9 @@ const Navbar = () => {
          </Box>
 
          <Box display="flex" justifyContent="center" alignItems="center" w="30%">
-           <Img height="30px" w="120px" src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/website-logo_400x@2x.png?v=1596288204%202x%22"/>
+           <Link to="/">
+                <Img  height="30px" w="120px" src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/website-logo_400x@2x.png?v=1596288204%202x%22"/>
+           </Link>
          </Box>
 
          <Box display="flex" justifyContent="center" alignItems="center" gap="18px" w="30%">
