@@ -1,0 +1,56 @@
+
+.breadcrumb{
+   display:flex;
+   justify-content: space-between;
+   align-items:center;
+   margin:auto;
+   width:80%;
+   margin-top:80px;
+
+}
+
+.breadcrumbBox{
+    display:flex;
+    align-items:center;
+}
+
+.grey{
+    color:grey;
+}
+
+.container{
+    display:grid;
+    grid-template-rows:auto;
+    grid-template-columns:repeat(4,230px);
+    gap:40px;
+    justify-content:center;
+    align-items:center;
+    font-family:"bitterbrush";
+    margin-top:20px;
+}
+
+.container>div{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    justify-content: center;
+    align-items: center;
+}
+.fruitDisplay{
+    border-radius:10px;
+}
+
+.fruitImage{
+    border-radius:30px;
+}
+
+.container>div>p{
+    font-size:18px;
+}
+
+.container>div>h3{
+    color:rgb(212, 23, 23);
+    font-size:20px;
+    font-weight: bold;
+}
+

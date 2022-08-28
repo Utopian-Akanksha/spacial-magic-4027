@@ -1,12 +1,13 @@
 import React from 'react'
 import {useEffect, useReducer} from 'react'
-// import {Link} from "react-router-dom"
-// import { useDispatch, useSelector } from 'react-redux';
+import {Link} from "react-router-dom"
 import { fetchData } from '../Action/action';
 import {productReducer} from '../Action/reducer'
 import Navbar from '../Components/Navbar';
 import FruitsNavbar from '../Components/FruitsNavbar';
 // import { Spinner, Button} from '@chakra-ui/react'
+import "../Styles/AllFruits.css"
+
 
 const initialState = {
         loading: false,
@@ -21,7 +22,7 @@ const AllFruits = () => {
     // const[toggle,setToggle]=useState(false);
     useEffect(()=>
     {
-        fetchData(dispatch)
+        fetchData(dispatch,"allfruits")
 
     },[])
 
@@ -47,15 +48,28 @@ const AllFruits = () => {
       <Navbar/>
 
       <FruitsNavbar/>
+
+      <div className="breadcrumb">
+            <div className="breadcrumbBox">
+                <i class="fas fa-home"></i>
+                <h4>&nbsp;<Link to="/">Home / </Link></h4>
+                <p className="grey" > &nbsp;All Fruits</p> 
+            </div>
+            <div>
+                <p className="grey">Showing {state.data.length} results</p>
+            </div>
+      </div>
      
       {/* {state.loading &&<Spinner size='lg'/>} */}
     
-    <div>
+    <div className="container" >
         {state.data.map((fruit)=>
         (
             <div key={fruit.id} >
                 {/* <Link to="/products">  */}
-                   <img src={fruit.image} alt="fruit" />
+                  <div className="fruitDisplay">
+                     <img className="fruitImage" src={fruit.image} alt="fruit" />
+                  </div>
                 {/* </Link> */}
                 <p>{fruit.name}</p>
                 <h3>₹{fruit.price}</h3>

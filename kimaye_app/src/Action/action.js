@@ -8,10 +8,10 @@ export const getProductError = {type:"GET_PRODUCT_ERROR"};
 // export const getSingleProductSuccess = {type:"GET_SINGLE_PRODUCT_SUCCESS"};
 
 
-export const fetchData = (dispatch) => {
+export const fetchData = (dispatch,link) => {
     dispatch(getProductLoading)
     // setTimeout(() => {
-        axios.get(`https://kimaye-rest-api.herokuapp.com/all-fruits`)
+        axios.get(`http://localhost:3000/${link}`)
             .then((res) => { 
                 // console.log(res.data)
                 dispatch({...getProductSuccess, payload: res.data }) 

@@ -11,9 +11,9 @@ const AllRoutes = () => {
   return (
     <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/all-fruits" element={<AllFruits/>}/>
-        <Route path="/all-veggies" element={<AllVeggies/>}/>
-        <Route path="/fresh-cuts" element={<FreshCuts/>}/>
+        <Route path="/allfruits" element={<AllFruits/>}/>
+        <Route path="/allveggies" element={<AllVeggies/>}/>
+        <Route path="/freshcuts" element={<FreshCuts/>}/>
         <Route path="/combo" element={<FruitCombo/>}/>
         <Route path="/gifts" element={<KimayeGifts/>}/>
     </Routes>
