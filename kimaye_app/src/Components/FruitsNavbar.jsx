@@ -1,15 +1,50 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import "../Styles/FruitNavbar.css"
+
+const links = [
+  {
+    to: "/allfruits",
+    title: "All FRUITS"
+  },
+  {
+    to: "/allveggies",
+    title: "ALL VEGGIES"
+  },
+  {
+    to: "/freshcuts",
+    title: "FRESH CUTS"
+  },
+  {
+    to: "/combo",
+    title: "FRUIT COMBO"
+  },
+  {
+    to: "/gifts",
+    title: "KIMAYE GIFTS"
+  }
+];
+
+const baseStyle = {
+  textDecoration: "none",
+};
+
+const activeStyle = {
+  textDecoration: "underline",
+};
 
 const FruitsNavbar = () => {
   return (
     <div className="fruitNavbar" >
-        <Link to="/allfruits"><p>ALL FRUITS</p></Link>
-        <Link to="/allveggies"><p>ALL VEGGIES</p></Link>
-        <Link to="/freshcuts"><p>FRESH CUTS</p></Link>
-        <Link to="/combo"><p>FRUIT COMBO</p></Link>
-        <Link to="/gifts"><p>GIFTS BY KIMAYE</p></Link>
+       {links.map((item) => (
+        <NavLink
+          style={({ isActive }) => (isActive ? activeStyle : baseStyle)}
+          key={item.to}
+          to={item.to}
+        >
+         <p> {item.title}</p>
+        </NavLink>
+      ))}
     </div>
   )
 }

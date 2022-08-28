@@ -1,0 +1,54 @@
+
+.btn{
+    border:0;
+    cursor: pointer;
+ 
+ }
+
+ .shopping{
+     height: 40%;
+     width: 40%;;
+     margin: auto;
+     margin-top: 25px;
+ }
+ 
+ .modal{
+     min-width: 50%;
+ }
+ 
+ .instruction{
+     font-size: 20px;
+     color:black;
+     font-family: PT Sans, Arial, Helvetica, sans-serif;
+     font-weight: bold;
+     padding: 25px;
+     text-align: center;
+ }
+ 
+ .pin{
+      margin-left:30px;
+     font-size: 15px;
+    }
+ 
+ .loc_logo {
+     width: 45px;
+     height: 60px;
+     margin-bottom: -10px;
+   }
+ 
+   sub {
+     /* margin-left: -20px;
+    padding-bottom: 20px; */
+   color:red;
+   }
+   
+ 
+   .btn1{
+     margin: auto;
+     border:2px solid #98CB4C;
+     /* background-color: white; */
+     color:#98CB4C;
+     margin-top: -20px;
+     margin-bottom: 20px;
+   }
+   

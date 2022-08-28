@@ -1,12 +1,13 @@
 import React from 'react'
 import {useEffect, useReducer} from 'react'
-// import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
 import { fetchData } from '../Action/action';
 import {productReducer} from '../Action/reducer'
 import Navbar from '../Components/Navbar';
 import FruitsNavbar from '../Components/FruitsNavbar';
 // import { Spinner, Button} from '@chakra-ui/react'
-import "../Styles/AllFruits.css"
+import "../Styles/AllFruits.css";
+import Footer from '../Components/Footer'
 
 
 const initialState = {
@@ -48,6 +49,17 @@ const FreshCuts = () => {
       <Navbar/>
 
       <FruitsNavbar/>
+
+      <div className="breadcrumb">
+            <div className="breadcrumbBox">
+                <i class="fas fa-home"></i>
+                <h4>&nbsp;<Link to="/">Home / </Link></h4>
+                <p className="grey" > &nbsp;Fresh Cuts</p> 
+            </div>
+            <div>
+                <p className="grey">Showing {state.data.length} results</p>
+            </div>
+      </div>
      
       {/* {state.loading &&<Spinner size='lg'/>} */}
     
@@ -65,6 +77,10 @@ const FreshCuts = () => {
             </div>
         )) }
       </div>
+
+      <div style={{marginTop:"100px"}}>
+          <Footer/>
+        </div>
       
     </div>
   )
