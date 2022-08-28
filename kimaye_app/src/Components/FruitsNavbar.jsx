@@ -1,13 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import "../Styles/FruitNavbar.css"
 
 const FruitsNavbar = () => {
   return (
-    <div>
-        <Link to="/all-fruits">ALL FRUITS</Link>
-        <Link to="/fresh-cuts" >FRESH CUTS</Link>
-        <Link to="/combo">FRUIT COMBO</Link>
-        <Link to="/gifts">GIFTS BY KIMAYE</Link>
+    <div className="fruitNavbar" >
+        <Link to="/allfruits"><p>ALL FRUITS</p></Link>
+        <Link to="/allveggies"><p>ALL VEGGIES</p></Link>
+        <Link to="/freshcuts"><p>FRESH CUTS</p></Link>
+        <Link to="/combo"><p>FRUIT COMBO</p></Link>
+        <Link to="/gifts"><p>GIFTS BY KIMAYE</p></Link>
     </div>
   )
 }
