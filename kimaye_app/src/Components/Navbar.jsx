@@ -1,12 +1,14 @@
 import '../Styles/Navbar.css'
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import {Box,Img,Menu,MenuItem,MenuButton,MenuList,Portal,Text} from "@chakra-ui/react";
 // import {ChevronDownIcon} from '@chakra-ui/icons';
 import {Link} from 'react-router-dom';
 import bag from '../assets/bag.png'
 import location from '../assets/location.png'
-import profile from '../assets/profile.png'
 import search from '../assets/search.png'
+import {LocationContext} from '../Context/LocationContext';
+import LocationBox from './LocationBox'
+import Signup from '../Authentication/Signup';
 
 const Navbar = () => {
   const [fix, setFix] = useState(false);
@@ -18,6 +20,14 @@ const Navbar = () => {
       setFix(false);
     }
   }
+
+
+  const {onOpen,size, setSize, pin} = useContext(LocationContext);
+
+  const handleSizeClick = (newSize) => {
+    setSize(newSize);
+    onOpen();
+  };
 
   window.addEventListener("scroll", setFixed);
     let cat = [
@@ -76,6 +86,7 @@ const Navbar = () => {
 
        <div className={fix ? "navBox fixed-top" : "navBox"}>
          
+         {/* menuItems */}
          <Box display="flex" justifyContent="center" alignItems="center" gap="22px" fontSize="16px"  fontFamily="PT Sans" className="menu" w="30%" >
            {cat.map((el) => (
             <Menu key={el.id}>
@@ -101,20 +112,42 @@ const Navbar = () => {
             </Link>
          </Box>
 
+
+
+         {/* Logo Kimaye */}
          <Box display="flex" justifyContent="center" alignItems="center" w="30%">
            <Link to="/">
                 <Img  height="30px" w="120px" src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/website-logo_400x@2x.png?v=1596288204%202x%22"/>
            </Link>
          </Box>
 
-         <Box display="flex" justifyContent="center" alignItems="center" gap="18px" w="30%">
-             <Box display="flex" justifyContent="center" alignItems="center" gap="7px" fontSize="12px" >
+
+
+         {/* Location,Search,Login */}
+         <Box display="flex" justifyContent="center" alignItems="center" gap="15px" w="30%">
+             
+          <span>
+             <Box  display="flex" justifyContent="center" alignItems="center" gap="7px" fontSize="12px"
+                   onClick={() => handleSizeClick(size)}  key={size} m={4} >
                <Img height="20px" w="20px" src={location} /> 
+               <sub>
+                   <b>{pin}</b>
+               </sub>
                <Text fontFamily=" PT Sans, Arial, Helvetica, sans-serif">Mumbai</Text>
              </Box>
-             <Img height="19px" w="20px" src={search} />
-             <Img height="20px" w="20px" src={profile} />
-             <Img height="20px" w="20px" src={bag} />
+             <LocationBox/>
+          </span>
+
+
+             <div>
+                <Img height="19px" w="20px" src={search} />
+             </div>
+            <div>
+               <Signup/>
+            </div>
+            <div>
+               <Img height="20px" w="20px" src={bag} />
+            </div>
          </Box>
 
        </div>

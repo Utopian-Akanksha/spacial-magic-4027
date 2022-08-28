@@ -10,21 +10,21 @@ const cards1 =[
      image:"https://cdn.shopify.com/s/files/1/0449/5225/6667/collections/recommended-1-min_570x.png?v=1614338437" ,
      title:"ALL FRUITS",
      description:"Pick and choose from a wide range of delicious fruits.",
-     link:"/all-fruits"
+     link:"/allfruits"
   },
   { 
      id:"2",
     image:"https://cdn.shopify.com/s/files/1/0449/5225/6667/collections/category-inage_370x.jpg?v=1659083246" ,
     title:"All VEGGIES",
     description:"A handpicked and curated offering.",
-    link:"/all-veggies"
+    link:"/allveggies"
  },
   {   
       id:"3",
       image:"https://cdn.shopify.com/s/files/1/0449/5225/6667/collections/recommended-3-min_570x.png?v=1614338730" ,
       title:"FRESH CUTS",
       description:"We want to spoon-feed you… quite literally.",
-      link:"/fresh-cuts"
+      link:"/freshcuts"
    },
  
 ]

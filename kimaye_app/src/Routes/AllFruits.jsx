@@ -6,7 +6,8 @@ import {productReducer} from '../Action/reducer'
 import Navbar from '../Components/Navbar';
 import FruitsNavbar from '../Components/FruitsNavbar';
 // import { Spinner, Button} from '@chakra-ui/react'
-import "../Styles/AllFruits.css"
+import "../Styles/AllFruits.css";
+import Footer from '../Components/Footer'
 
 
 const initialState = {
@@ -76,6 +77,10 @@ const AllFruits = () => {
             </div>
         )) }
       </div>
+
+      <div style={{marginTop:"100px"}}>
+          <Footer/>
+        </div>
       
     </div>
   )
